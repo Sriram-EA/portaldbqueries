@@ -1,0 +1,12 @@
+-- User table for registering new user.
+
+
+create table user(
+	ID int primary key auto_increment, 
+    FIRSTNAME varchar(30), 
+    LASTNAME varchar(30),  
+    EMAILID varchar(30), 
+    PASSWORDS varchar(30)
+);
+
+select * from user;
