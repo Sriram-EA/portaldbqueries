@@ -1,12 +1,27 @@
--- User table for registering new user.
+-- Users table for Logging in. 
 
-
-create table user(
-	ID int primary key auto_increment, 
-    FIRSTNAME varchar(30), 
-    LASTNAME varchar(30),  
-    EMAILID varchar(30), 
-    PASSWORDS varchar(30)
+create table users(
+	psno varchar(100) primary key, 
+    firstname varchar(100), 
+    lastname varchar(100),  
+    dob varchar(30)
 );
 
-select * from user;
+select * from users;  
+
+-------------------------------
+
+-- Events table 
+
+create table events( 
+    eventid int primary key,
+    eventname varchar(300),  
+    eventdate date, 
+    starttime time, 
+    endtime time,
+    organizername varchar(100), 
+    accountname varchar(100), 
+    eventflag varchar(100)
+); 
+
+
