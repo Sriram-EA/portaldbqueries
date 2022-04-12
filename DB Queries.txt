@@ -24,4 +24,36 @@ create table events(
     eventflag varchar(100)
 ); 
 
+-- Items table
 
+create table items(
+	itemid int primary key, 
+    itemname varchar(300), 
+    presentername varchar(100),  
+    eventid int,
+    foreign key(eventid) references events(eventid)
+); 
+
+-- Subscribed events Table 
+
+create table subscribedevents( 
+
+psno varchar(100), 
+eventid int, 
+foreign key(psno) references users(psno), 
+foreign key(eventid) references events(eventid)
+
+); 
+
+-- Scores Table 
+
+create table scores( 
+
+    psno varchar(100) primary key, 
+    score int,
+    eventid int, 
+    itemid int,  
+    foreign key(eventid) references events(eventid),  
+    foreign key(itemid) references items(itemid)
+
+);
