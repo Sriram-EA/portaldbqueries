@@ -49,10 +49,11 @@ foreign key(eventid) references events(eventid)
 
 create table scores( 
 
-    psno varchar(100) primary key, 
+    psno varchar(100), 
     score int,
     eventid int, 
-    itemid int,  
+    itemid int,   
+    foreign key(psno) references users(psno),
     foreign key(eventid) references events(eventid),  
     foreign key(itemid) references items(itemid)
 
