@@ -58,3 +58,11 @@ create table scores(
     foreign key(itemid) references items(itemid)
 
 );
+
+-- Panelist Table 
+
+create table panelist(
+    psno varchar(100) primary key
+);
+
+select * from panelist;
