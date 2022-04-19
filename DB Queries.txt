@@ -65,4 +65,14 @@ create table panelist(
     psno varchar(100) primary key
 );
 
-select * from panelist;
+select * from panelist; 
+
+-- Admin Table
+
+create table admintable(
+	psno varchar(100), 
+    passwords varchar(300),
+    foreign key(psno) references users(psno)
+);
+
+select * from admintable;

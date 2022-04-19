@@ -1,0 +1,21 @@
+dont show event flag
+Admin show in Items page itself - total average score
+No buttons for closed events- Admin
+Closed event button - remove in scheduled event
+Edit Schedule button - In Scheduled event -admin 
+
+start event should only appear if event date ,  start time  has crossed
+Remove the schedule event in running event -admin 
+
+Show Dropdown  - Participant/ Panelist or Admin in Login Page 
+
+If admin 
+
+Ask another Password - 
+
+Then validate 
+
+Admin Dashboard logout button. 
+
+Entity Relation Diagram for tables.
+
