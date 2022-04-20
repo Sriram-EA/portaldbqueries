@@ -16,7 +16,7 @@ select * from users;
 create table events( 
     eventid int primary key,
     eventname varchar(300),  
-    eventdate date, 
+    eventdate varchar(100), 
     starttime time, 
     endtime time,
     organizername varchar(100), 
