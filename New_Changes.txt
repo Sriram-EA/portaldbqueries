@@ -1,0 +1,17 @@
+Users table
+
+Login time 
+logout time 
+login flag
+Check all pages if login flag is active 
+
+
+Panelist table 
+Add column eventid 
+
+So while calculating the score check only that particular event panelist's score 
+
+Scores table 
+
+Add score date column 
+Add score date time 
