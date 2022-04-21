@@ -1,12 +1,16 @@
 -- Users table for Logging in. 
 
 create table users(
-	psno varchar(100) primary key, 
+    psno varchar(100) primary key, 
     firstname varchar(100), 
     lastname varchar(100),  
-    dob varchar(30)
-);
-
+    dob varchar(30),
+    logindate varchar(100), 
+    logintime time, 
+    logoutdate varchar(100),
+    logouttime time, 
+    loginflag varchar(100)
+); 
 select * from users;  
 
 -------------------------------
@@ -27,7 +31,7 @@ create table events(
 -- Items table
 
 create table items(
-	itemid int primary key, 
+    itemid int primary key, 
     itemname varchar(300), 
     presentername varchar(100),  
     eventid int,
@@ -48,21 +52,24 @@ foreign key(eventid) references events(eventid)
 -- Scores Table 
 
 create table scores( 
-
     psno varchar(100), 
-    score int,
+    score int, 
     eventid int, 
-    itemid int,   
+    itemid int,  
+    scoredate varchar(100), 
+    scoretime time,
     foreign key(psno) references users(psno),
     foreign key(eventid) references events(eventid),  
     foreign key(itemid) references items(itemid)
-
 );
 
 -- Panelist Table 
 
 create table panelist(
-    psno varchar(100) primary key
+    psno varchar(100), 
+    eventid int,  
+    foreign key(psno) references users(psno),
+    foreign key(eventid) references events(eventid)
 );
 
 select * from panelist; 
